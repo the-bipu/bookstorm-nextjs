@@ -2,13 +2,26 @@
 
 const nextConfig = {
     // Your Next.js configuration
-    i18n: {
-        locales: ['en', 'esp'],
-        defaultLocale: 'en',
-    },
     images: {
-        domains: ['images.pexels.com', 'images.unsplash.com', 'media.licdn.com', 'i.ibb.co'],
-    },
+        remotePatterns: [
+            {
+            protocol: "https",
+            hostname: "images.pexels.com",
+            },
+            {
+            protocol: "https",
+            hostname: "images.unsplash.com",
+            },
+            {
+            protocol: "https",
+            hostname: "media.licdn.com",
+            },
+            {
+            protocol: "https",
+            hostname: "i.ibb.co",
+            },
+        ],
+    }
 };
 
 const defaultLocale = nextConfig.i18n.defaultLocale;
